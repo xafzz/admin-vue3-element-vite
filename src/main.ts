@@ -2,10 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 
-import {
-    setupAssets,
-    setupElementPlus
-} from './plugins'
+import './plugins'
 
 const app = createApp(App)
 
@@ -22,19 +19,9 @@ app.config.warnHandler = (msg, vm, trace)=>{
 }
 console.log(app)
 
-function setupPlugins() {
-    //静态资源
-    setupAssets()
-    //
-    setupElementPlus(app)
-}
-
-
 async function setupApp() {
 
     app.mount('#app');
 }
-
-setupPlugins();
 
 setupApp();
