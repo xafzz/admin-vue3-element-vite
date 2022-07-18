@@ -1,28 +1,28 @@
 <template>
-  <div>
-      {{num}}
-      <el-button type="primary" @click="add()">+{{msg.name}}</el-button>
-  </div>
+    <el-config-provider>
+        <router-view/>
+    </el-config-provider>
 </template>
 
 <script setup lang="ts">
-import { reactive,ref,watchEffect,onBeforeMount } from 'vue'
-const msg = reactive({
-    name:1
+import {onMounted, onUnmounted, watchEffect, onBeforeMount} from 'vue'
+
+// 设置初始化，防止刷新时恢复默认
+onBeforeMount(() => {
+    console.log('设置初始化')
+});
+
+// 页面加载时
+onMounted(() => {
+    console.log('页面加载时')
 })
 
-onBeforeMount(()=>{
-    console.log(1111)
+// 页面销毁时
+onUnmounted(() => {
+    console.log('页面销毁时')
 })
-
-let num = ref(1)
-
-function add(){
-    num.value++
-}
-
 watchEffect(()=>{
-    console.log(333)
+    console.log(66)
 })
 
 </script>

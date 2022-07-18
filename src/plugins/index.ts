@@ -1,7 +1,12 @@
-import Vue from 'vue'
-export { setupAssets } from '@/plugins/assets';
-export { setupElementPlus } from '@/plugins/element-plus';
+import { createApp } from 'vue'
+
+import { setupAssets } from '@/plugins/assets';
+import { setupElementPlus } from '@/plugins/element-plus';
 
 
-Vue.use(setupAssets)
-   .use(setupElementPlus)
+export function loadPlugins(app: ReturnType<typeof createApp>) {
+
+    setupElementPlus(app);
+    // 引入静态资源
+    setupAssets();
+}

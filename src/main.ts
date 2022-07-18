@@ -1,10 +1,16 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import pinia from './store';
+import router from './router';
 
+import { loadPlugins } from './plugins'
+import mitt from 'mitt';
 
-import './plugins'
 
 const app = createApp(App)
+
+//加载插件
+loadPlugins(app)
 
 app.config.errorHandler = (err, vm, info) => {
     // 处理错误
@@ -17,11 +23,9 @@ app.config.warnHandler = (msg, vm, trace)=>{
     // `trace` 是组件的继承关系追踪
     console.warn(222,trace,msg )
 }
-console.log(app)
 
-async function setupApp() {
 
-    app.mount('#app');
-}
+app.use(pinia).use(router).mount('#app')
 
-setupApp();
+
+app.config.globalProperties.mittBus = mitt();
