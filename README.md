@@ -1,4 +1,4 @@
-# Vue 3 + Ant + TypeScript + Vite
+# Vue 3 + Element-plus + TypeScript + Vite
 
 ## 版本
 >node: v16.15.1
@@ -87,7 +87,7 @@ Vue 的官方状态管理库
 
     yarn add axios
 
-## [element-plus](https://www.antdv.com/docs/vue/introduce)
+## [element-plus](https://element-plus.gitee.io/zh-CN/)
 
     yarn add element-plus
 
