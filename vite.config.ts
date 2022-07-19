@@ -28,8 +28,8 @@ export default ({command, mode}: ConfigEnv): UserConfig => {
         define: {
             __APP_INFO__: JSON.stringify(__APP_INFO__),
         },
-        server:{
-            port: 8080, //默认值： 3000
+        server: {
+            port: 8888, //默认值： 3000
             open: true, // 是否自动打开浏览器(默认false)
         },
         resolve: {
