@@ -1,20 +1,31 @@
-import {createRouter, createWebHistory} from 'vue-router';
-import { RouterHistory } from 'vue-router';
+import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router';
 import NProgress from 'nprogress';
+import { NextLoading } from '@/utils/loading';
 
-const routes: ({ redirect: string; path: string } | { path: string; component: () => Promise<any>; meta: { title: string }; name: string })[]  = [
+const routes:RouteRecordRaw[] = [
     {
         path: '/',
-        redirect: '/index'
-    },
-    {
-        path: '/index',
-        name: 'index',
-        meta:{
-            title: '啊啊啊'
-        },
-        component: () => import('@/views/index.vue')
-    },
+        component: () => import('@/layout/index.vue'),
+        redirect: '/index',
+        children: [
+            {
+                path: '/index',
+                name: 'index',
+                meta:{
+                    title: '啊啊啊'
+                },
+                component: () => import('@/views/index.vue')
+            },
+            {
+                path: '/test',
+                name: 'test',
+                meta:{
+                    title: 'test'
+                },
+                component: () => import('@/views/test.vue')
+            },
+        ]
+    }
 ]
 
 /**
@@ -31,6 +42,13 @@ const router = createRouter({
 
 // 路由加载前
 router.beforeEach(async (to, from, next) => {
+    // 界面 loading 动画开始执行
+    NextLoading.start();
+
+    setTimeout(()=>{
+        console.log(111)
+    },2000)
+
 	NProgress.start();
 
     document.title = to?.meta?.title || '页面'

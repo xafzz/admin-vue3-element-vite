@@ -4,7 +4,7 @@
         <el-button type="danger" @click="add()">+{{msg.name}}</el-button>
 
 
-        <router-link to="/test"><el-button>跳转页面</el-button></router-link>
+        <router-link to="/"><el-button>跳转页面</el-button></router-link>
     </div>
 </template>
 
