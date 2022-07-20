@@ -1,8 +1,6 @@
 <template>
     <el-config-provider :size="getGlobalComponentSize">
-        <transition>
-            <router-view/>
-        </transition>
+        <router-view/>
     </el-config-provider>
 </template>
 

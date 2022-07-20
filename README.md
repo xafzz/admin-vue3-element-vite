@@ -105,3 +105,5 @@ Vue 的官方状态管理库
 ## [Windi CSS](https://windicss.org/guide/)
 
     yarn add --dev vite-plugin-windicss windicss
+
+## [Animate.css](https://animate.style/)

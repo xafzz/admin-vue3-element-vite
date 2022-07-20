@@ -4,7 +4,7 @@
         <el-container class="flex-center">
             <header>头部</header>
             <el-scrollbar>
-                <router-view/>
+                <app-main></app-main>
             </el-scrollbar>
         </el-container>
     </el-container>
@@ -12,16 +12,6 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { NextLoading } from '@/utils/loading';
-// 页面加载前
-onMounted(() => {
-    NextLoading.done();
-});
-</script>
+import AppMain from '@/layout/main.vue'
 
-<style lang="less" scoped>
-.layout-container{
-    width: 100%;
-    height: 100%;
-}
-</style>
+</script>

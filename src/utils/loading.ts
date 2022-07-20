@@ -6,36 +6,21 @@ import '@/theme/loading.less';
  * @method start 创建 loading
  * @method done 移除 loading
  */
-export const NextLoading = {
+export const CircularLoading = {
 	// 创建 loading
 	start: () => {
-		const bodys: Element = document.body;
-		const div = <HTMLElement>document.createElement('div');
-		div.setAttribute('class', 'loading-next');
-		const htmls = `
-			<div class="loading-next-box">
-				<div class="loading-next-box-warp">
-					<div class="loading-next-box-item"></div>
-					<div class="loading-next-box-item"></div>
-					<div class="loading-next-box-item"></div>
-					<div class="loading-next-box-item"></div>
-					<div class="loading-next-box-item"></div>
-					<div class="loading-next-box-item"></div>
-					<div class="loading-next-box-item"></div>
-					<div class="loading-next-box-item"></div>
-					<div class="loading-next-box-item"></div>
-				</div>
-			</div>
-		`;
-		div.innerHTML = htmls;
-		bodys.insertBefore(div, bodys.childNodes[0]);
-		window.nextloading = true;
+		const docBody: Element = document.body;
+		const createDiv = <HTMLElement>document.createElement('div');
+        createDiv.setAttribute('class', 'loading-loading');
+        createDiv.innerHTML = '<div class="loading-circular"><div class="loading-circular-warp"></div></div>';
+        docBody.insertBefore(createDiv, docBody.childNodes[0]);
+		window.circularLoading = true;
 	},
 	// 移除 loading
 	done: () => {
 		nextTick(() => {
-			window.nextloading = false;
-			const el = <HTMLElement>document.querySelector('.loading-next');
+			window.circularLoading = false;
+			const el = <HTMLElement>document.querySelector('.loading-loading');
 			el?.parentNode?.removeChild(el);
 		});
 	},

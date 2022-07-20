@@ -1,6 +1,6 @@
 import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router';
 import NProgress from 'nprogress';
-import { NextLoading } from '@/utils/loading';
+import { CircularLoading } from '@/utils/loading';
 
 const routes:RouteRecordRaw[] = [
     {
@@ -42,13 +42,9 @@ const router = createRouter({
 
 // 路由加载前
 router.beforeEach(async (to, from, next) => {
-    // 界面 loading 动画开始执行
-    NextLoading.start();
-
-    setTimeout(()=>{
-        console.log(111)
-    },2000)
-
+    // loading 动画开始执行
+    if (window.circularLoading === undefined) CircularLoading.start();
+    NProgress.configure({ showSpinner: false });
 	NProgress.start();
 
     document.title = to?.meta?.title || '页面'
