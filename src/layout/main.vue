@@ -1,5 +1,5 @@
 <template>
-    <div class="h-full">
+    <div class="h-full bg-white">
         <router-view v-slot="{ Component }">
             <transition name="lightSpeedInRight" mode="out-in">
                 <keep-alive>

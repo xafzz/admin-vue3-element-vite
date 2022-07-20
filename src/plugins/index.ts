@@ -1,8 +1,8 @@
 import { createApp } from 'vue'
 
-import { setupAssets } from '@/plugins/assets';
 import { setupElementPlus } from '@/plugins/element-plus';
 import { setupI18n } from '@/plugins/i18n';
+import { setupAssets } from '@/plugins/assets';
 
 
 export function loadPlugins(app: ReturnType<typeof createApp>) {

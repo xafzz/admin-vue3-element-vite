@@ -102,7 +102,7 @@ Vue 的官方状态管理库
 ```
 
 
-## [Windi CSS](https://windicss.org/guide/)
+## [Windi CSS](https://windicss.org/guide/) / [tailwindcss](https://tailwindcss.com/docs/installation)
 
     yarn add --dev vite-plugin-windicss windicss
 

@@ -1,10 +1,56 @@
 <template>
     <div>
-        {{num}}
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
         <el-button type="danger" @click="add()">+{{msg.name}}</el-button>
 
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
 
         <router-link to="/test"><el-button>跳转页面</el-button></router-link>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
+        {{num}}<br>
     </div>
 </template>
 
