@@ -12,7 +12,8 @@ const routes:RouteRecordRaw[] = [
                 path: '/index',
                 name: 'index',
                 meta:{
-                    title: '啊啊啊'
+                    title: '啊啊啊',
+                    keepAlive:true
                 },
                 component: () => import('@/views/index.vue')
             },
@@ -47,6 +48,8 @@ router.beforeEach(async (to, from, next) => {
     NProgress.configure({ showSpinner: false });
 	NProgress.start();
 
+    console.log('route------->',11111)
+
     document.title = to?.meta?.title || '页面'
     next();
 });
@@ -54,6 +57,7 @@ router.beforeEach(async (to, from, next) => {
 // 路由加载后
 router.afterEach(() => {
 	NProgress.done();
+    console.log('route------->',22222)
 });
 
 // 导出路由

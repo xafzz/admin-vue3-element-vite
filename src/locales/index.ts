@@ -1,4 +1,3 @@
-
 import { createI18n } from 'vue-i18n'
 
 import elementEnLocale from 'element-plus/lib/locale/lang/en'
@@ -19,7 +18,7 @@ const messages = {
 }
 
 const i18n = createI18n({
-  locale: 'zh',
+  locale: 'zh-cn', //'en',
   messages: messages
 })
 

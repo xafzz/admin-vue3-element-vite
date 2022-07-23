@@ -49,6 +49,7 @@
         {{num}}<br>
         {{num}}<br>
         {{num}}<br>
+	    <router-link to="/test"><el-button>跳转页面</el-button></router-link>
         {{num}}<br>
         {{num}}<br>
     </div>
