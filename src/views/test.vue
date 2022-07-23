@@ -1,5 +1,6 @@
 <template>
     <div>
+	    <el-icon size="20" color="#ffffff"><Setting /></el-icon>
         {{num}}
         <el-button type="danger" @click="add()">+{{msg.name}}</el-button>
 

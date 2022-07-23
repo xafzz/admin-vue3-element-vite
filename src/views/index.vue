@@ -1,5 +1,6 @@
 <template>
     <div>
+	    <el-icon size="80" color="#ce1d1d"><Setting /></el-icon>
         {{num}}<br>
         {{num}}<br>
         {{num}}<br>

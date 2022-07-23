@@ -12,6 +12,7 @@ export interface configuresState{
 	isDrawer:boolean,
 	primary: string,
 	isIsDark: boolean,
-	isFixedHeader:boolean
+	isFixedHeader:boolean,
+	iconColor:string,
 
 }

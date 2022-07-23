@@ -1,5 +1,5 @@
 <template>
-	<el-container class=" w-full h-full">
+	<el-container class="layout-container">
 		<!--  w-16  -->
 		<sidebar class="overflow-x-hidden w-56"></sidebar>
 		<!-- 结构保持不变 -->

@@ -29,8 +29,16 @@ const getGlobalComponentSize = computed(()=>{
 })
 // 设置初始化，防止刷新时恢复默认
 onBeforeMount(() => {
+	const LocalStorageConfigures = LocalStorage.get('Configures')
+	if( LocalStorageConfigures ){
+		globalSetting.value = LocalStorageConfigures
 
-	LocalStorage.set('Configures', globalSetting.value);
+		const body = document.documentElement as HTMLElement;
+		if (LocalStorageConfigures.isIsDark) body.setAttribute('data-theme', 'dark');
+
+	}else{
+		LocalStorage.set('Configures', globalSetting.value);
+	}
     console.log('设置初始化')
 });
 

@@ -1,5 +1,5 @@
 <template>
-		<div class="h-full pt-3.5 pl-3.5">
+		<div class="h-full layout-main pt-3.5 pl-3.5">
 			<router-view v-slot="{ Component }">
 				<transition name="lightSpeedInRight" mode="out-in">
 					<keep-alive>
@@ -21,7 +21,7 @@ import { storeToRefs } from 'pinia';
 import { CircularLoading } from '@/utils/loading';
 import { useKeepAliveRoutes } from "@/store/keepAliveRoutes";
 import { useConfigures } from "@/store/configures";
-import AppSetting from '@/layout/components/setting.vue'
+import AppSetting from '@/layout/components/setting/index.vue'
 
 const { proxy } = <any>getCurrentInstance();
 
